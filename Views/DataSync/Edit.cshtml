@@ -1,8 +1,8 @@
 ﻿@model DatabaseSync.ViewModels.CustomerLocationVM
 
 <div class="container mt-5">
-    <form asp-action="Create" method="post">
-        <h3 class="text-center mb-4">Create New Customer with Locations</h3>
+    <form asp-action="Edit" method="post">
+        <h3 class="text-center mb-4">Edit Customer with Locations</h3>
 
         <div class="form-group">
             <label asp-for="Name" class="form-label"></label>
@@ -24,14 +24,17 @@
 
         <h4 class="mt-4">Locations</h4>
         <div id="locationFields">
-            <div class="form-group">
-                <label class="form-label">Address</label>
-                <input name="Addresses" class="form-control" />
-            </div>
+            @for (int i = 0; i < Model.Addresses.Count; i++)
+            {
+                <div class="form-group">
+                    <label class="form-label">Address</label>
+                    <input name="Addresses[@i]" value="@Model.Addresses[i]" class="form-control" />
+                </div>
+            }
         </div>
         <button type="button" id="addLocation" class="btn btn-secondary mt-2">Add Another Address</button>
 
-        <button type="submit" class="btn btn-primary mt-4">Add Customer with Locations</button>
+        <button type="submit" class="btn btn-primary mt-4">Update Customer with Locations</button>
     </form>
 </div>
 
@@ -43,9 +46,9 @@
             var newAddressField = document.createElement('div');
             newAddressField.classList.add('form-group');
             newAddressField.innerHTML = `
-                <label class="form-label">Address</label>
-                <input name="Addresses" class="form-control" />
-            `;
+                        <label class="form-label">Address</label>
+                        <input name="Addresses" class="form-control" />
+                    `;
             locationFields.appendChild(newAddressField);
         });
     </script>
