@@ -133,7 +133,7 @@ namespace DatabaseSync.Controllers
                     customer.Name = model.Name;
                     customer.Email = model.Email;
                     customer.Phone = model.Phone;
-
+                    customer.LastModified = DateTime.Now;
                     // Clear existing locations and add updated ones
                     customer.Locations.Clear();
                     foreach (var address in model.Addresses)
