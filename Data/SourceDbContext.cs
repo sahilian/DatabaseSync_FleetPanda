@@ -21,6 +21,11 @@ namespace DatabaseSync.Data
                 .Property(l => l.LastModified)
                 .IsConcurrencyToken();
 
+            modelBuilder.Entity<SourceCustomer>()
+            .HasMany(c => c.Locations)
+            .WithOne(l => l.Customer)
+            .HasForeignKey(l => l.CustomerID)
+            .OnDelete(DeleteBehavior.Cascade);
 
             // Seed data for Customers and Locations
             modelBuilder.Entity<SourceCustomer>().HasData(

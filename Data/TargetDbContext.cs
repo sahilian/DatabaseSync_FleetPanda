@@ -10,5 +10,16 @@ namespace DatabaseSync.Data
         public DbSet<SyncLog> SyncLogs { get; set; }
 
         public TargetDbContext(DbContextOptions<TargetDbContext> options) : base(options) { }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TargetCustomer>()
+                .HasMany(c => c.Locations)
+                .WithOne(l => l.Customer)
+                .HasForeignKey(l => l.CustomerID)
+                .OnDelete(DeleteBehavior.Cascade); 
+        }
+
     }
+
+   
 }

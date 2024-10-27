@@ -11,6 +11,6 @@ namespace DatabaseSync.Models.Target
         public string Phone { get; set; }
         public DateTime LastModified { get; set; }
 
-        public ICollection<TargetLocation> Locations { get; set; }
+        public ICollection<TargetLocation> Locations { get; set; } = new List<TargetLocation>();
     }
 }

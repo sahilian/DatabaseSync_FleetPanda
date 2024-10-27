@@ -10,6 +10,6 @@ namespace DatabaseSync.Models.Target
         public string Address { get; set; }
         public DateTime LastModified { get; set; }
 
-        public TargetLocation Customer { get; set; }
+        public virtual TargetCustomer Customer { get; set; }
     }
 }
