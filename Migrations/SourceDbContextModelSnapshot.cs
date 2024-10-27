@@ -35,7 +35,6 @@ namespace DatabaseSync.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModified")
-                        .IsConcurrencyToken()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -55,7 +54,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 1,
                             Email = "sapana@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2800),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9301),
                             Name = "Sapana Shrestha",
                             Phone = "9811111111"
                         },
@@ -63,7 +62,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 2,
                             Email = "sahil@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2809),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9353),
                             Name = "Sahil Shrestha",
                             Phone = "9822222222"
                         },
@@ -71,7 +70,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 3,
                             Email = "aayush@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2810),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9354),
                             Name = "Aayush Khadka",
                             Phone = "9833333333"
                         },
@@ -79,7 +78,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 4,
                             Email = "sneha@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2811),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9355),
                             Name = "Sneha Sharma",
                             Phone = "9844444444"
                         },
@@ -87,7 +86,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 5,
                             Email = "rajesh@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2812),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9356),
                             Name = "Rajesh Karki",
                             Phone = "9855555555"
                         },
@@ -95,7 +94,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 6,
                             Email = "ramesh@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2813),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9357),
                             Name = "Ramesh Bhandari",
                             Phone = "9866666666"
                         },
@@ -103,7 +102,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 7,
                             Email = "nabin@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2814),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9358),
                             Name = "Nabin Rijal",
                             Phone = "9877777777"
                         },
@@ -111,7 +110,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 8,
                             Email = "sita@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2815),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9359),
                             Name = "Sita Rai",
                             Phone = "9888888888"
                         },
@@ -119,7 +118,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 9,
                             Email = "pratiksha@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2816),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9360),
                             Name = "Pratiksha Joshi",
                             Phone = "9899999999"
                         },
@@ -127,7 +126,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 10,
                             Email = "bikash@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2817),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9361),
                             Name = "Bikash Acharya",
                             Phone = "9800000001"
                         },
@@ -135,7 +134,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 11,
                             Email = "santosh@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2818),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9362),
                             Name = "Santosh Yadav",
                             Phone = "9800000002"
                         },
@@ -143,7 +142,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 12,
                             Email = "niraj@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2819),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9363),
                             Name = "Niraj Gurung",
                             Phone = "9800000003"
                         },
@@ -151,7 +150,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 13,
                             Email = "kriti@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2820),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9364),
                             Name = "Kriti Maharjan",
                             Phone = "9800000004"
                         },
@@ -159,7 +158,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 14,
                             Email = "binita@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2821),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9365),
                             Name = "Binita Kunwar",
                             Phone = "9800000005"
                         },
@@ -167,7 +166,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 15,
                             Email = "saroj@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2822),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9366),
                             Name = "Saroj Luitel",
                             Phone = "9800000006"
                         },
@@ -175,7 +174,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 16,
                             Email = "asmita@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2822),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9367),
                             Name = "Asmita Lama",
                             Phone = "9800000007"
                         },
@@ -183,7 +182,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 17,
                             Email = "kiran@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2823),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9368),
                             Name = "Kiran Sapkota",
                             Phone = "9800000008"
                         },
@@ -191,7 +190,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 18,
                             Email = "bhawana@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2824),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9369),
                             Name = "Bhawana Adhikari",
                             Phone = "9800000009"
                         },
@@ -199,7 +198,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 19,
                             Email = "arjun@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2825),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9370),
                             Name = "Arjun Adhikari",
                             Phone = "9800000010"
                         },
@@ -207,7 +206,7 @@ namespace DatabaseSync.Migrations
                         {
                             CustomerID = 20,
                             Email = "mina@gmail.com",
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2826),
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9371),
                             Name = "Mina Magar",
                             Phone = "9800000011"
                         });
@@ -229,7 +228,6 @@ namespace DatabaseSync.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("LastModified")
-                        .IsConcurrencyToken()
                         .HasColumnType("datetime2");
 
                     b.HasKey("LocationID");
@@ -244,175 +242,175 @@ namespace DatabaseSync.Migrations
                             LocationID = 1,
                             Address = "Kathmandu",
                             CustomerID = 1,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2905)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9459)
                         },
                         new
                         {
                             LocationID = 2,
                             Address = "Bhaktapur",
                             CustomerID = 1,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2906)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9460)
                         },
                         new
                         {
                             LocationID = 3,
                             Address = "Dang",
                             CustomerID = 2,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2907)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9461)
                         },
                         new
                         {
                             LocationID = 4,
                             Address = "Chitwan",
                             CustomerID = 3,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2908)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9462)
                         },
                         new
                         {
                             LocationID = 5,
                             Address = "Butwal",
                             CustomerID = 3,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2909)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9463)
                         },
                         new
                         {
                             LocationID = 6,
                             Address = "Dharan",
                             CustomerID = 4,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2910)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9464)
                         },
                         new
                         {
                             LocationID = 7,
                             Address = "Janakpur",
                             CustomerID = 5,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2910)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9465)
                         },
                         new
                         {
                             LocationID = 8,
                             Address = "Nepalgunj",
                             CustomerID = 6,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2911)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9465)
                         },
                         new
                         {
                             LocationID = 9,
                             Address = "Birgunj",
                             CustomerID = 7,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2912)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9466)
                         },
                         new
                         {
                             LocationID = 10,
                             Address = "Hetauda",
                             CustomerID = 7,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2913)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9467)
                         },
                         new
                         {
                             LocationID = 11,
                             Address = "Gorkha",
                             CustomerID = 8,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2914)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9468)
                         },
                         new
                         {
                             LocationID = 12,
                             Address = "Lamjung",
                             CustomerID = 9,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2915)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9469)
                         },
                         new
                         {
                             LocationID = 13,
                             Address = "Palpa",
                             CustomerID = 10,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2915)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9470)
                         },
                         new
                         {
                             LocationID = 14,
                             Address = "Syangja",
                             CustomerID = 10,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2916)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9470)
                         },
                         new
                         {
                             LocationID = 15,
                             Address = "Baglung",
                             CustomerID = 11,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2917)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9471)
                         },
                         new
                         {
                             LocationID = 16,
                             Address = "Damauli",
                             CustomerID = 12,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2918)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9472)
                         },
                         new
                         {
                             LocationID = 17,
                             Address = "Tanahun",
                             CustomerID = 13,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2919)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9473)
                         },
                         new
                         {
                             LocationID = 18,
                             Address = "Ilam",
                             CustomerID = 14,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2920)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9474)
                         },
                         new
                         {
                             LocationID = 19,
                             Address = "Jhapa",
                             CustomerID = 15,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2921)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9475)
                         },
                         new
                         {
                             LocationID = 20,
                             Address = "Kavre",
                             CustomerID = 16,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2921)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9476)
                         },
                         new
                         {
                             LocationID = 21,
                             Address = "Banepa",
                             CustomerID = 16,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2922)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9477)
                         },
                         new
                         {
                             LocationID = 22,
                             Address = "Sindhuli",
                             CustomerID = 17,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2923)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9477)
                         },
                         new
                         {
                             LocationID = 23,
                             Address = "Nuwakot",
                             CustomerID = 18,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2924)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9478)
                         },
                         new
                         {
                             LocationID = 24,
                             Address = "Ramechhap",
                             CustomerID = 19,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2925)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9479)
                         },
                         new
                         {
                             LocationID = 25,
                             Address = "Dolakha",
                             CustomerID = 20,
-                            LastModified = new DateTime(2024, 10, 27, 18, 18, 21, 433, DateTimeKind.Local).AddTicks(2926)
+                            LastModified = new DateTime(2024, 10, 27, 18, 46, 35, 974, DateTimeKind.Local).AddTicks(9480)
                         });
                 });
 

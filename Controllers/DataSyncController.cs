@@ -130,6 +130,7 @@ namespace DatabaseSync.Controllers
 
                 if (customer != null)
                 {
+                    customer.CustomerID = id;
                     customer.Name = model.Name;
                     customer.Email = model.Email;
                     customer.Phone = model.Phone;
@@ -139,12 +140,11 @@ namespace DatabaseSync.Controllers
                     foreach (var address in model.Addresses)
                     {
                         customer.Locations.Add(new SourceLocation
-                        {
+                        {                            
                             Address = address,
                             LastModified = DateTime.Now
                         });
-                    }
-
+                    }                    
                     await _sourceDb.SaveChangesAsync();
                     return RedirectToAction("Index");
                 }

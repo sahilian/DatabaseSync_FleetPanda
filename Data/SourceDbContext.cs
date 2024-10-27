@@ -13,13 +13,13 @@ namespace DatabaseSync.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<SourceCustomer>()
-                .Property(c => c.LastModified)
-                .IsConcurrencyToken();
+            //modelBuilder.Entity<SourceCustomer>()
+            //    .Property(c => c.LastModified)
+            //    .IsConcurrencyToken();
 
-            modelBuilder.Entity<SourceLocation>()
-                .Property(l => l.LastModified)
-                .IsConcurrencyToken();
+            //modelBuilder.Entity<SourceLocation>()
+            //    .Property(l => l.LastModified)
+            //    .IsConcurrencyToken();
 
             modelBuilder.Entity<SourceCustomer>()
             .HasMany(c => c.Locations)

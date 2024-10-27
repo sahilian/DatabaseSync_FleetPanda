@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseSync.Migrations.TargetDb
 {
     [DbContext(typeof(TargetDbContext))]
-    [Migration("20241027123404_fixestarget")]
+    [Migration("20241027130146_fixestarget")]
     partial class fixestarget
     {
         /// <inheritdoc />
