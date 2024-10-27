@@ -1,0 +1,52 @@
+﻿@model DatabaseSync.ViewModels.DataSyncVM
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Data Synchronization</h1>
+
+    <form asp-action="SyncData" method="post" class="mb-4">
+        <div class="form-group">
+            <label for="syncInterval">Sync Interval (in seconds):</label>
+            <input type="number" id="syncInterval" name="syncInterval" value="@Model.SyncInterval" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Fetch Data Manually</button>
+    </form>
+
+    <h2 class="mb-3">Fetched Customers</h2>
+    @if (Model.Customers != null && Model.Customers.Count > 0)
+    {
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Locations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model.Customers)
+                {
+                    <tr>
+                        <td>@customer.CustomerID</td>
+                        <td>@customer.Name</td>
+                        <td>@customer.Email</td>
+                        <td>@customer.Phone</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                @foreach (var location in customer.Locations)
+                                {
+                                    <li>@location.Address</li>
+                                }
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="text-muted">No customers found.</p>
+    }
+</div>
