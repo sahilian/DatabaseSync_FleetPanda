@@ -30,7 +30,7 @@ namespace DatabaseSync.Services
                 foreach (var sourceCustomer in sourceCustomers)
                 {
                     var newCustomer = MapSourceToTargetCustomer(sourceCustomer);
-                    newCustomer.LastModified = DateTime.Now;       
+                    newCustomer.LastModified = DateTime.Now;
                     _targetDb.Customers.Add(newCustomer);
 
                     SyncLocations(sourceCustomer.Locations, newCustomer.Locations, newCustomer.CustomerID);
@@ -53,19 +53,19 @@ namespace DatabaseSync.Services
 
                         var customersNotInTarget = _sourceDb.Customers
                             .Where(c => !targetCustomerIds.Contains(c.CustomerID))
-                            .Include(c => c.Locations)    
+                            .Include(c => c.Locations)
                             .ToList();
 
                         var targetCustomer = MapSourceToTargetCustomers(customersNotInTarget);
 
                         _targetDb.Customers.AddRange(targetCustomer);
 
-                        foreach(var customer in targetCustomer)
+                        foreach (var customer in targetCustomer)
                         {
                             SyncLocations(sourceCustomer.Locations, customer.Locations, customer.CustomerID);
                             LogSyncDetails($"New customer added: {sourceCustomer.CustomerID}, {sourceCustomer.Name}");
                         }
-                        
+
 
 
                     }
@@ -79,7 +79,7 @@ namespace DatabaseSync.Services
                     if (targetCustomer == null)
                     {
                         var newCustomer = MapSourceToTargetCustomer(sourceCustomer);
-                        newCustomer.LastModified = DateTime.Now;        
+                        newCustomer.LastModified = DateTime.Now;
                         _targetDb.Customers.Add(newCustomer);
 
                         SyncLocations(sourceCustomer.Locations, newCustomer.Locations, newCustomer.CustomerID);
@@ -90,7 +90,7 @@ namespace DatabaseSync.Services
                         bool hasChanges = UpdateCustomerIfChanged(targetCustomer, sourceCustomer);
                         if (hasChanges)
                         {
-                            targetCustomer.LastModified = DateTime.Now;      
+                            targetCustomer.LastModified = DateTime.Now;
                             _targetDb.Customers.Update(targetCustomer);
                             LogSyncDetails($"Updated customer: {targetCustomer.CustomerID}, {targetCustomer.Name}");
                         }
@@ -99,6 +99,23 @@ namespace DatabaseSync.Services
                     }
                 }
             }
+            var sourceCustomerIds = sourceCustomers.Select(c => c.CustomerID).ToHashSet();
+
+            var targetCustomers = _sourceDb.Customers
+                    .Include(c => c.Locations)
+                    .ToList();
+
+            var deletedCustomers = targetCustomers
+                .Where(tc => !sourceCustomerIds.Contains(tc.CustomerID))
+                .ToList();
+
+            foreach (var deletedCustomer in deletedCustomers)
+            {
+                var deletedCustomerMapped = MapSourceToTargetCustomer(deletedCustomer);
+                _targetDb.Customers.Remove(deletedCustomerMapped);
+                LogSyncDetails($"Deleted customer: {deletedCustomer.CustomerID}, {deletedCustomer.Name}");
+            }
+
 
             _targetDb.SaveChanges();
         }
@@ -160,7 +177,7 @@ namespace DatabaseSync.Services
 
             if (hasChanges)
             {
-                targetLocation.LastModified = DateTime.Now;    
+                targetLocation.LastModified = DateTime.Now;
             }
 
             return hasChanges;
@@ -176,7 +193,7 @@ namespace DatabaseSync.Services
             };
 
             _targetDb.SyncLogs.Add(syncLog);
-            _targetDb.SaveChanges();          
+            _targetDb.SaveChanges();
         }
 
 
@@ -191,8 +208,8 @@ namespace DatabaseSync.Services
                 Phone = sourceCustomer.Phone,
                 Locations = sourceCustomer.Locations.Select(sourceLocation => new TargetLocation
                 {
-                    LocationID = sourceLocation.LocationID,        
-                    Address = sourceLocation.Address,      
+                    LocationID = sourceLocation.LocationID,
+                    Address = sourceLocation.Address,
                     CustomerID = sourceCustomer.CustomerID,
                     LastModified = DateTime.Now
                 }).ToList(),
